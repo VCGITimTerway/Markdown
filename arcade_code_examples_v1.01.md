@@ -1,19 +1,3 @@
-- [Markdown Template - Arcade Examples](#markdown-template---arcade-examples)
-  - [Code and Syntax Highlighting](#code-and-syntax-highlighting)
-  - [Code and Syntax Highlighting - Microsoft Teams-Compatible](#code-and-syntax-highlighting---microsoft-teams-compatible)
-    - [Inline block of code](#inline-block-of-code)
-- [Date Functions](#date-functions)
-  - [Symbolize Features Dynamically by Date Categories Using DateDiff(())](#symbolize-features-dynamically-by-date-categories-using-datediff)
-  - [Symbolize Features Dynamically by Date](#symbolize-features-dynamically-by-date)
-- [Geometry Functions](#geometry-functions)
-  - [Calculate Area Dynamically](#calculate-area-dynamically)
-- [Logical Functions](#logical-functions)
-  - [Symbolize Features by Presence/Absence of an Attribute Value with IsEmpty](#symbolize-features-by-presenceabsence-of-an-attribute-value-with-isempty)
-- [Pop-Up Examples](#pop-up-examples)
-  - [Calculated Fields](#calculated-fields)
-  - [FeatureSets: Access Data from Another Layer in a Popup](#featuresets-accessing-data-from-another-layer-in-a-popup)
-
-
 # Markdown Template - Arcade Examples
 This is a section for markdown syntax examples. Preview-able and exportable via [https://dillinger.io](https://dillinger.io/)
 
@@ -129,7 +113,7 @@ This example operates on the standardized parcel dataset and uses the `AreaGeode
 //Correct return for Dynamically Calculating Acreage Percent Difference
 var GLACRES = $feature.ACRESGL;
 var GISACRES = AreaGeodetic($feature,'acres');
-var AC_Diff_PCT = ((Abs(GLACRES-GISACRES))/(GLACRES+GISACRES/2))*100;
+var AC_Diff_PCT = ((Abs(GLACRES-GISACRES))/((GLACRES+GISACRES)/2))*100;
 Round(AC_Diff_PCT,2)
 ```
 
